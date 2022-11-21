@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Login</h1>
+    <form action="authenticate.php" method="POST" name="loginform" onsubmit="return validation()">
+
+        <!--EMAIL-->
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email">
+
+        <br/>
+
+        <!--PASSWORD-->
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass">
+
+        <br/>
+
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        function validation(){
+            let u_email = document.loginform.email.value;
+            let u_pass = document.getElementById("pass").value;
+
+            if (u_email != "" && u_pass != ""){
+                alert("working");
+                return true;
+            }else {
+                alert("not working");
+                return false;
+            };
+        };
+    </script>
+    
+</body>
+</html>
